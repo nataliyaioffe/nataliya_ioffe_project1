@@ -16,6 +16,19 @@ img {width: 100%; max-width: 100%; display: block;}
 
 
 /* ---- MAIN STRUCTURE ----- */
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left:0;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 1280px;
@@ -52,7 +65,7 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 13rem;
-    line-height: 100px;
+    line-height: 65px;
 }
 
 h2 {
@@ -83,7 +96,8 @@ p {
 header {
     background-image: url(../assets/image-1@2x.jpg);
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom;
     min-height: 100vh;
     color: #fcfcfc;
 }
@@ -93,17 +107,22 @@ header .wrapper {
 }
 
 /* ----- MAIN//DESKTOP NAVIGATION ---- */
-.mainNavigation {
+nav.mainNavigation {
     float: right;
 }
 
-.mainNavigation li {
+nav.mainNavigation li {
     float: left;
     margin-left: 35px;
 }
 
-.mainNavigation a {
+nav.mainNavigation a {
     color: #fcfcfc;
+    padding-bottom: 3px;
+}
+
+nav.mainNavigation a:hover {
+    border-bottom: 2px solid white;
 }
 
 /* ----- HAMBURGER NAVIGATION ----- */
@@ -111,62 +130,64 @@ header .wrapper {
 label[for="toggle"] {
     float: right;
 }
+.fa-bars {
+    font-size: 3rem;
+    padding-top: 2px;
+}
 /* default: HIDE hamburger icon + checkbox */
 input#toggle, label[for="toggle"] {
     display: none;
 }
 /* when hamburger label/icon clicked, mainNav appears */
-input#toggle:checked + .mainNavigation {
+input#toggle:checked + nav.mainNavigation {
     top: 0;
     left: 0;
     display: block;
 }
 
-
 .exit-responsive {
     color: black;
     margin-left: 50px;
 }
-
 ul.mobileSocial,
 .exit-responsive {
     display: none;
 }
-
-.social {
+ul.mainSocial {
+    width: 100px;
+    padding-top: 25vh;
+    text-align: center;
     float: right;
     position: relative;
-    padding-top: 25vh;
     top: 0;
     left: 127px;
-    width: 100px;
-    text-align: center;
 }
-
-.social li {
+ul.mainSocial li {
     margin: 15px 25px 0 15px;
 }
-
-.social a {
-    color: #fcfcfc;
+ul.mainSocial a {
     font-size: 20px;
+    color: #fcfcfc;
 }
 
+ul.mainSocial a:hover {
+    color: black;
+}
 .heroContent {
-    text-align: center;
     padding-top: 65vh;
+    text-align: center;
 }
 
-h2.logo {
+.logo {
     float: left;
 }
 
-header span {
+span.welcome  {
+    font-family: 'Lato', sans-serif;
     font-size: 3.2rem;
     font-weight: 700;
     display: block;
     text-transform: uppercase;
-    line-height: 1;
 }
 
 /* ----- ABOUT SECTION ----- */
@@ -192,45 +213,60 @@ header span {
     margin-right: 0;
 }
 
-/* ----- LANDSCAPE NAV w ICONS ----- */
+/* ----- RESOURCES / LANDSCAPE NAV w ICONS ----- */
 
-#landscapeNav {
+#resources {
     background-image: url(../assets/image-5@2x.png);
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
-.moreNav li {
+ul.resourceNav li {
     display: inline-block;
     width: 179px;
     margin-right: 4%;
 }
 
-.moreNav li:nth-of-type(4) {
+ul.resourceNav li:nth-of-type(4) {
     margin: 0;
 }
 
-.moreNav a {
+ul.resourceNav a {
     font-family: 'Playfair Display', serif;
     color: #fcfcfc;
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
+    padding-bottom: 3px;
 }
 
-.moreNav i {
+ul.resourceNav a:hover {
+    border-bottom: 2px solid white;
+}
+
+ul.resourceNav i {
     display: block;
     margin-bottom: 23.5px;
     font-size: 4rem;
 }
 
-button {
+a.a-btn {
+    display: inline-block;
+}
+
+a.a-btn, button {
     background-color: #e7a8e6;
     height: 50px;
     font-size: 18px;
-    padding: 0 32px;
+    padding: 10px 30px;
     border: none;
+    color: #1f2022;
+    transition: ease .35s;
+}
+
+a.a-btn:hover, button:hover {
+    background-color: #f9ccf9;
 }
 
 /* ----- FEATURED ARTICLE ----- */
@@ -273,22 +309,21 @@ button {
 .half.right {
     float: right;
 }
-
 .synopsis {
-    width: 300px;
-    margin: 100px 20%;
+    max-width: 430px;
+    margin: 100px 15%;
 }
-
 .right .synopsis {
     text-align: left;
-    margin-right: auto;
+    float: left;
 }
-
 .left .synopsis {
     text-align: right;
-    margin-left: auto;
+    float: right;
 }
-
+.synopsis p {
+    max-width: 300px;
+}
 .postImage img {
     min-height: 462px;
     object-fit: cover;
@@ -386,10 +421,10 @@ form button {
     footer {
         padding: 50px 0;
     }
-    .social {
+    ul.mainSocial {
         left: 40px;
     }
-    .social li {
+    ul.mainSocial li {
         margin: 15px 0;
     }
     .postImage img {
@@ -414,10 +449,15 @@ form button {
     .right .synopsis,
     .left .synopsis {
         text-align: center;
+        float: none;        
+    }
+   
+    .synopsis p {
+        max-width: 100%;
     }
 }
 
-@media(max-width: 826px) {
+@media(max-width: 830px) {
     .galleryItem {
         width: 48%;
         margin: 0;
@@ -428,15 +468,15 @@ form button {
     .galleryItem:nth-of-type(3) {
         display: none;
     }
-    .moreNav {
+    ul.resourceNav {
         display: inline-block;
     }
-    .moreNav li {
+    ul.resourceNav li {
         width: 49%;
         margin: 0;
     }
-    .moreNav li:nth-of-type(3),
-    .moreNav li:nth-of-type(4) {
+    ul.resourceNav li:nth-of-type(3),
+    ul.resourceNav li:nth-of-type(4) {
         margin-top: 50px;
     }
     .newsletter {
@@ -470,9 +510,9 @@ form button {
     }
     .heroContent {
         text-align: center;
-        padding-top: 50vh;
+        padding-top: 35vh;
     }
-    .mainNavigation {
+    nav.mainNavigation {
         z-index: 10;
         background-color: white;
         width: 400px;
@@ -485,21 +525,21 @@ form button {
         padding: 20px 50px 50px 50px;
         transition: ease-out .25s;
     }
-    .mainNavigation ul {
+    nav.mainNavigation ul {
         margin: 0 auto;
     }
-    .mainNavigation li {
+    nav.mainNavigation li {
         float: none;
         margin: 5vh 0;
     }
-    .mainNavigation li.exit-responsive {
+    nav.mainNavigation li.exit-responsive {
         display: inline-block;
-        margin: 0 0 0 90%;
+        margin: 0 0 0 95%;
     }
-    .mainNavigation a {
+    nav.mainNavigation a {
         color: black;
     }
-    .social {
+    ul.mainSocial {
         display: none;
     }
     ul.mobileSocial {
@@ -511,8 +551,9 @@ form button {
     }
     h1 {
         font-size: 10rem;
+        line-height: 47px;
     }
-    header span {
+    span.welcome {
         font-size: 2.2rem;
     }
 }
@@ -534,21 +575,42 @@ form button {
 }
 
 @media (max-width: 400px) {
+    .logo {
+        font-size: 3.0rem;
+    }
     #aboutShutter .sectionText {
         padding: 0;
     }
-    section#landscapeNav {
+    section#resources {
         background-image: none;
         background-color: #1f2022;
         padding: 0;
     }
-    .moreNav li {
+    ul.resourceNav li {
         display: block;
         width: 100%;
         margin: 50px 0;
     }
-    .moreNav li:nth-of-type(3),
-    .moreNav li:nth-of-type(4) {
+    ul.resourceNav li:nth-of-type(3),
+    ul.resourceNav li:nth-of-type(4) {
         margin: 50px 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 8rem;
+        line-height: 47px;
+    }
+
+    header span {
+        font-size: 1.8px;
+    }
+}
+
+@media (max-width: 347px) {
+    h2 {
+        font-size: 3.8rem;
     }
 }

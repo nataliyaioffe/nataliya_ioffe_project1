@@ -13,28 +13,30 @@
 </head>
 
 <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+    <!-- START HEADER -->
     <header>
-        <div class="wrapper clearfix">
-            <!-- START TOP BAR -->
+        <div class="wrapper">
+            <!-- start topbar -->
             <div class="topBar clearfix">
                 <h2 class="logo">Shutter</h2>   
                 <!--  hamburger icon & checkbox-->
                 <label for="toggle">
-                    <i class="fa fa-bars fa-2x"></i>
+                    <i class="fa fa-bars"></i>
                 </label>
                 <input type="checkbox" id="toggle" name="toggle">
-                <!-- START NAVIGATION -->
+                    <!-- start Main Navigation -->
+                <!-- start navigation -->
                 <nav class="mainNavigation">
                     <!-- exit icon-->
-                    <li class="exit-responsive">
-                        <label for="toggle"><i class="fas fa-times"></i></label>
-                    </li>
-                    <ul class=" mobileMainNav clearfix">
+                    <ul class="clearfix">
+                        <li class="exit-responsive"><label for="toggle"><i class="fas fa-times"></i></label></li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+                    <!--  -->
                     <ul class="mobileSocial">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -46,31 +48,33 @@
                 <!-- / END NAV -->
             </div>
             <!-- / END TOP BAR -->
-            <div class="social">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <!-- / SOCIAL -->
+            <!-- <div class="social"> -->
+            <ul class="mainSocial">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <!-- </div> -->
+            <!-- / end main social -->
             <div class="heroContent">
-                <span>Welcome to</span>
-                <h1>Shutter</h1>
+                <h1><span class="welcome">Welcome to</span>Shutter</h1>
             </div>
-            <!-- / END HERO CONTENT -->
+            <!-- / end hero-content -->
         </div>
-        <!-- / END WRAPPER -->
+        <!-- / end wrapper -->
     </header>
-    <!-- / END HEADER -->
-    <main>
+    <!-- ////// END HEADER ////// -->
+
+
+
+    <main id="mainContent">
         <section id="aboutShutter">
             <div class="wrapper">
                 <div class="sectionText">
                     <h2>About Shutter</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Q interdum orci quis convallis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
-                    <button>Find out more</button>
+                    <a href="#" class="a-btn">Find out more</a>
                 </div>
             </div>
             <!-- / END WRAPPER -->
@@ -82,24 +86,28 @@
                     <img src="./assets/image-2.png" alt="Beautiful silhouettes of palm trees against a purple-pink sunset.">
                 </div>
                 <div class="galleryItem">
-                    <img src="./assets/image-3.png" alt="White fairy lights in a mason jar.">
+                    <img src="./assets/image-3.png" alt="White, decorative fairy lights in a mason jar.">
                 </div>
                 <div class="galleryItem">
-                    <img src="./assets/image-4.png" alt="Cars stopped at a crosswalk on a city street.">
+                    <img src="./assets/image-4.png" alt="Cars stopped at a crosswalk on a rainy city street.">
                 </div>
             </div>
             <!-- / END WRAPPER -->
         </section>
         <!-- / END GALLERY SECTION -->
-        <section id="landscapeNav">
-            <ul class="moreNav clearfix">
-                <li><a href="#"><i class="fas fa-images"></i>Gallery</a>
+        <section id="resources">
+            <ul class="resourceNav clearfix">
+                <li>
+                    <a href="#"><i class="fas fa-images"></i>Gallery</a>
                 </li>
-                <li><a href="#"><i class="fas fa-camera"></i>Photo Tips</a>
+                <li>
+                    <a href="#"><i class="fas fa-camera"></i>Photo Tips</a>
                 </li>
-                <li><a href="#"><i class="fas fa-image"></i>About</a>
+                <li>
+                    <a href="#"><i class="fas fa-image"></i>About</a>
                 </li>
-                <li><a href="#"><i class="fas fa-envelope"></i>Contact</a>
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i>Contact</a>
                 </li>
             </ul>
         </section>
@@ -113,7 +121,8 @@
                     <div class="sectionText">
                         <h2>Behind the Lens</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus.  interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscin Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque i orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit pulvinar tortor nulla el. Lorem ipsum dolor sit amet, consectetur adipiscing elit pulvinar tortor nulla elementum eleifend.</p>
-                        <button>Find out more</button>
+                        <a href="#" class="a-btn">Find out more</a>
+                        <!-- <button>Find out more</button> -->
                     </div>
                 </div>
             </div>
@@ -124,7 +133,7 @@
             <div class="postPreview clearfix">
                 <div class="half right clearfix">
                     <div class="postImage">
-                        <img src="./assets/image-7.png" alt="Silhouette of a mammoth rock justting out of the ocean, against a purple-pink sunset.">
+                        <img src="./assets/image-7@2x.png" alt="Silhouette of a mammoth rock justting out of the ocean, against a purple-pink sunset.">
                     </div>
                 </div>
                 <!-- / END HALF -->
@@ -132,7 +141,8 @@
                     <div class="synopsis">
                         <h3>Nature & Scenery</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum.</p>
-                        <button>Read more</button>
+                        <a href="#" class="a-btn">Read more</a>
+                        <!-- <button>Read more</button> -->
                     </div>
                 </div>
                 <!-- / END HALF -->
@@ -140,7 +150,7 @@
             <div class="postPreview clearfix">
                 <div class="half left clearfix">
                     <div class="postImage">
-                        <img src="./assets/image-8.png" alt="Silhouette of a mammoth rock justting out of the ocean, against a purple-pink sunset.">
+                        <img src="./assets/image-8@2x.png" alt="Woman standing on the beach, looking toward the ocean in front of her.">
                     </div>
                 </div>
                 <!-- / END HALF -->
@@ -148,7 +158,8 @@
                     <div class="synopsis">
                         <h3>Candid Photography</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum.</p>
-                        <button>Read more</button>
+                        <a href="#" class="a-btn">Read more</a>
+                        <!-- <button>Read more</button> -->
                     </div>
                 </div>
                 <!-- / END HALF -->
