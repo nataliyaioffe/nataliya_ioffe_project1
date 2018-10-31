@@ -189,6 +189,7 @@ span.welcome  {
     display: block;
     text-transform: uppercase;
 }
+/* ----- END HEADER STYLES----- */
 
 /* ----- ABOUT SECTION ----- */
 
@@ -201,6 +202,8 @@ span.welcome  {
     padding: 0 10vw;
 }
 
+/* ----- END ABOUT SECTION STYLES----- */
+
 /* ----- GALLERY ----- */
 
 .galleryItem {
@@ -212,6 +215,7 @@ span.welcome  {
 .galleryItem:nth-of-type(3) {
     margin-right: 0;
 }
+/* ----- END GALLERY STYLSE----- */
 
 /* ----- RESOURCES / LANDSCAPE NAV w ICONS ----- */
 
@@ -269,6 +273,9 @@ a.a-btn:hover, button:hover {
     background-color: #f9ccf9;
 }
 
+/* ----- END RESOURCES STYLES ----- */
+
+
 /* ----- FEATURED ARTICLE ----- */
 
 .featuredContent {
@@ -288,6 +295,7 @@ a.a-btn:hover, button:hover {
 #featured .sectionText p {
     text-align: center;
 }
+/* ----- END FEATURED ARTICLE STYLES ----- */
 
 /* ----- BLOG ----- */
 
@@ -328,6 +336,7 @@ a.a-btn:hover, button:hover {
     min-height: 462px;
     object-fit: cover;
 }
+/* ----- END BLOG STYLES ----- */
 
 /* ----- FOOOTER ----- */
 
@@ -393,6 +402,8 @@ form button {
     color: rgba(252, 252, 252, 0.5);
     text-align: center;
 }
+
+/* ----- END FOOOTER STYLES ----- */
 
 /* ----------------------------------- */
 /* ---------- MEDIA QUERIES ---------- */
