@@ -1,0 +1,273 @@
+/* ----- HEADER ----- */
+header {
+  background-image: url(../assets/image-1@2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 100vh;
+  color: #fcfcfc;
+  .wrapper {
+    padding: 20px 0 100px 0;
+  }
+}
+
+/* ----- MAIN//DESKTOP NAVIGATION ---- */
+.mainNavigation {
+  float: right;
+  li {
+    float: left;
+    margin-left: 35px;
+  }
+  a {
+    color: #fcfcfc;
+    padding-bottom: 3px;
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+/* ----- HAMBURGER NAVIGATION ----- */
+/* hamburger icon */
+label[for="toggle"] {
+  float: right;
+}
+.fa-bars {
+  font-size: 3rem;
+  padding-top: 2px;
+}
+input#toggle,
+label[for="toggle"] {
+  display: none;
+}
+input#toggle:checked + nav.mainNavigation {
+  top: 0;
+  left: 0;
+  display: block;
+}
+.exit-responsive {
+  color: black;
+  margin-left: 50px;
+}
+.mobileSocial,
+.exit-responsive {
+  display: none;
+}
+.mainSocial {
+  width: 100px;
+  padding-top: 25vh;
+  text-align: center;
+  float: right;
+  position: relative;
+  top: 0;
+  left: 127px;
+  li {
+    margin: 15px 25px 0 15px;
+  }
+  a {
+    font-size: 20px;
+    color: #fcfcfc;
+  }
+}
+
+.mainSocial a:hover {
+  color: black;
+}
+.heroContent {
+  padding-top: 65vh;
+  text-align: center;
+}
+.logo {
+  float: left;
+}
+.welcome {
+  font-family: "Lato", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* ----- ABOUT ----- */
+
+#aboutShutter {
+  background-color: #f0f5ff;
+  .sectionText {
+    text-align: center;
+    padding: 0 10vw;
+  }
+}
+
+/* ----- GALLERY ----- */
+
+.galleryItem {
+  float: left;
+  width: calc((100% - 80px) / 3);
+  margin-right: 40px;
+}
+.galleryItem:nth-of-type(3) {
+  margin-right: 0;
+}
+
+/* ----- RESOURCES / LANDSCAPE NAV w ICONS ----- */
+
+#resources {
+  background-image: url(../assets/image-5@2x.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.resourceNav {
+  li {
+    display: inline-block;
+    width: 179px;
+    margin-right: 4%;
+  }
+  li:nth-of-type(4) {
+    margin: 0;
+  }
+  a {
+    font-family: "Playfair Display", serif;
+    color: #fcfcfc;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 3px;
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+  i {
+    display: block;
+    margin-bottom: 23.5px;
+    font-size: 4rem;
+  }
+}
+
+a.a-btn {
+  display: inline-block;
+}
+a.a-btn,
+button {
+  background-color: #e7a8e6;
+  height: 50px;
+  font-size: 18px;
+  padding: 10px 30px;
+  border: none;
+  color: #1f2022;
+  transition: ease 0.35s;
+}
+a.a-btn:hover,
+button:hover {
+  background-color: #f9ccf9;
+}
+
+/* ----- FEATURED ARTICLE ----- */
+
+.featuredContent {
+  text-align: center;
+}
+.featuredImage {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+#featured {
+  .sectionText {
+    width: 100%;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+/* ----- BLOG ----- */
+
+#blog {
+  padding: 0;
+  background-color: #f0f5ff;
+}
+.postPreview {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.half {
+  width: 50%;
+  float: left;
+}
+.half.right {
+  float: right;
+}
+.synopsis {
+  max-width: 430px;
+  margin: 100px 15%;
+  p {
+    max-width: 300px;
+    }
+}
+.right .synopsis {
+  text-align: left;
+  float: left;
+}
+.left .synopsis {
+  text-align: right;
+  float: right;
+}
+.postImage img {
+  min-height: 462px;
+  object-fit: cover;
+}
+
+/* ----- FOOOTER ----- */
+
+footer {
+  background-color: #232323;
+  color: #fcfcfc;
+  padding: 100px 0;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #fcfcfc;
+    font-weight: 400;
+  }
+}
+
+.fElement {
+  float: left;
+}
+.newsletter {
+  text-align: center;
+  width: 50%;
+}
+.newsletter.responsive {
+  display: none;
+}
+form {
+  margin-top: 10px;
+  input {
+    padding: 10px 30px;
+    width: calc(100% - 160px);
+    float: left;
+    height: 50px;
+  }
+  button {
+    float: left;
+  }
+}
+
+.pages {
+  text-align: right;
+}
+.pages,
+.contact {
+  width: 25%;
+}
+.copyright {
+  padding: 8px 0;
+  font-weight: 700;
+  clear: both;
+  background-color: black;
+  color: rgba(252, 252, 252, 0.5);
+  text-align: center;
+}

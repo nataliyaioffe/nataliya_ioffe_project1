@@ -1,0 +1,28 @@
+/* ---- GLOBAL ----- */
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+.skip-link:focus {
+    left:0;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 80%;
+}
+section {
+    padding: 100px 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* ---- END GLOBAL ----- */
